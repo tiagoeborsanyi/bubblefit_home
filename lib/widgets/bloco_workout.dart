@@ -15,7 +15,7 @@ class BlocoWorkout extends StatelessWidget {
     return Container(
       width: size.width * .9,
       // height: size.height * .3,
-      padding: const EdgeInsets.only(top: 10, bottom: 15),
+      padding: const EdgeInsets.only(top: 10, bottom: 4),
       decoration: BoxDecoration(
         color: bSecondaryColor,
         borderRadius: BorderRadius.circular(6),
@@ -44,7 +44,7 @@ class BlocoWorkout extends StatelessWidget {
             ),
             const SizedBox(height: 3),
             Text(
-              'Última sessão realizada: 15/03/22 - Treino A',
+              'Última sessão realizada: 15/03/22 - Posterior de coxa',
               style: Theme.of(context).textTheme.subtitle2?.copyWith(
                     fontWeight: FontWeight.w300,
                     color: Colors.white,
@@ -122,7 +122,9 @@ class BlocoWorkout extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(height: 10),
+            ElevatedButton(onPressed: () {}, child: Text('Iniciar treino'))
           ],
         ),
       ),
