@@ -1,4 +1,5 @@
 import 'package:bubblefit_home/screens/exercises_sessions.dart';
+import 'package:bubblefit_home/widgets/bloco_workout.dart';
 import 'package:bubblefit_home/widgets/botton_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
@@ -34,30 +35,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                width: size.width * .9,
-                height: size.height * .3,
-                decoration: BoxDecoration(
-                  color: bSecondaryColor,
-                  borderRadius: BorderRadius.circular(6),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Último workout realizado',
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              fontWeight: FontWeight.w400,
-                              color: Colors.white,
-                              fontSize: 20,
-                            ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              BlocoWorkout(size: size),
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
