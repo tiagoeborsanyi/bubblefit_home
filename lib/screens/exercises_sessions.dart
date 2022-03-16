@@ -16,17 +16,6 @@ class ExercisesSessions extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: bPrimaryColor,
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 15, top: 8, bottom: 8),
-            child: CircleAvatar(
-              radius: 30,
-              backgroundColor: Colors.white,
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.person),
-              ),
-            ),
-          ),
           bottom: const TabBar(
             tabs: [
               Tab(
