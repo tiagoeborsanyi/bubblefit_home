@@ -43,47 +43,53 @@ class CardExercise extends StatelessWidget {
                             ?.copyWith(color: Colors.white, fontSize: 16),
                       ),
                       const SizedBox(height: 5),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 5, horizontal: 10),
-                        decoration: BoxDecoration(
-                            color: bPrimaryColor,
-                            borderRadius: BorderRadius.circular(25),
-                            border: Border.all(color: Colors.white)),
-                        child: const Text(
-                          'COSTA',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 11,
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 10),
+                            decoration: BoxDecoration(
+                                color: bPrimaryColor,
+                                borderRadius: BorderRadius.circular(25),
+                                border: Border.all(color: Colors.white)),
+                            child: const Text(
+                              'COSTA',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 11,
+                              ),
+                            ),
                           ),
-                        ),
+                          const SizedBox(width: 15),
+                          Container(
+                            height: 45,
+                            width: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.purple,
+                              borderRadius: BorderRadius.circular(13),
+                              // shape: BoxShape.circle,
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  "Métricas",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                                SizedBox(width: 4),
+                                Icon(
+                                  Icons.graphic_eq_rounded,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ),
-                  const SizedBox(width: 15),
-                  Container(
-                    height: 45,
-                    width: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.purple,
-                      borderRadius: BorderRadius.circular(13),
-                      // shape: BoxShape.circle,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text(
-                          "Métricas",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                        SizedBox(width: 4),
-                        Icon(
-                          Icons.graphic_eq_rounded,
-                          color: Colors.white,
-                        ),
-                      ],
-                    ),
-                  ),
+                  const SizedBox(width: 5),
                 ],
               ),
               const SizedBox(height: 10),
