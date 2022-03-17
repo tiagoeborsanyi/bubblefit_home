@@ -126,7 +126,7 @@ class BlocoWorkout extends StatelessWidget {
             const SizedBox(height: 10),
             ElevatedButton(
                 onPressed: () {},
-                child: Text('Iniciar treino'),
+                child: const Text('Iniciar treino'),
                 style: ElevatedButton.styleFrom(primary: bBtnColor)),
           ],
         ),

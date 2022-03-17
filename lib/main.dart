@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: bPrimaryColor,
         textTheme: Theme.of(context).textTheme.apply(displayColor: bTextColor),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
 
       // home: const HomeScreen(),

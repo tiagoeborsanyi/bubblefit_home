@@ -1,4 +1,3 @@
-import 'package:bubblefit_home/widgets/botton_nav_bar.dart';
 import 'package:bubblefit_home/widgets/card_exercise.dart';
 import 'package:flutter/material.dart';
 
@@ -44,7 +43,6 @@ class ContentTabs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const BottonNavBar(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(top: 20, right: 20, left: 20),
