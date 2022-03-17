@@ -1,5 +1,7 @@
+import 'package:bubblefit_home/model/theme_model.dart';
 import 'package:bubblefit_home/tabs/tab_home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../constants.dart';
 
@@ -34,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: bPrimaryColor,
+        backgroundColor: Theme.of(context).primaryColor,
         leading: Padding(
           padding: const EdgeInsets.only(left: 15, top: 8, bottom: 8),
           child: CircleAvatar(
@@ -46,16 +48,23 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Provider.of<ThemeModel>(context, listen: false).toogleTheme();
+            },
+            icon: const Icon(Icons.toggle_on),
+          ),
+        ],
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
-          canvasColor: bPrimaryColor,
-          primaryColor: bPrimaryColor,
-          textTheme: Theme.of(context).textTheme.copyWith(
-                caption: const TextStyle(
-                  color: bTextColor,
-                ),
-              ),
+          canvasColor: Theme.of(context).primaryColor,
+          // textTheme: Theme.of(context).textTheme.copyWith(
+          //       caption: const TextStyle(
+          //         color: Colors.black,
+          //       ),
+          //     ),
         ),
         child: BottomNavigationBar(
           currentIndex: _page,
@@ -66,16 +75,33 @@ class _HomeScreenState extends State<HomeScreen> {
               curve: Curves.ease,
             );
           },
-          selectedItemColor: Colors.white,
+          selectedItemColor: Theme.of(context).textTheme.bodyText1!.color,
           unselectedItemColor: Colors.white54,
-          items: const [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.fitness_center), label: 'Workouts'),
+                icon: Icon(
+                  Icons.home,
+                  color: Theme.of(context).textTheme.bodyText1!.color,
+                ),
+                label: 'Home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.graphic_eq), label: 'Métricas'),
+                icon: Icon(
+                  Icons.fitness_center,
+                  color: Theme.of(context).textTheme.bodyText1!.color,
+                ),
+                label: 'Workouts'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: 'Configurações'),
+                icon: Icon(
+                  Icons.graphic_eq,
+                  color: Theme.of(context).textTheme.bodyText1!.color,
+                ),
+                label: 'Métricas'),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.settings,
+                  color: Theme.of(context).textTheme.bodyText1!.color,
+                ),
+                label: 'Configurações'),
           ],
         ),
       ),
