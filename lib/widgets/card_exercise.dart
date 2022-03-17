@@ -15,7 +15,7 @@ class CardExercise extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
       decoration: BoxDecoration(
-        color: bTertiaryColor,
+        color: bSecondaryColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Stack(
@@ -50,13 +50,13 @@ class CardExercise extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 10),
                             decoration: BoxDecoration(
-                                color: bPrimaryColor,
+                                color: bTertiaryColor,
                                 borderRadius: BorderRadius.circular(25),
-                                border: Border.all(color: Colors.white)),
+                                border: Border.all(color: Colors.black)),
                             child: const Text(
                               'COSTA',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 11,
                               ),
                             ),
@@ -66,7 +66,7 @@ class CardExercise extends StatelessWidget {
                             height: 45,
                             width: 100,
                             decoration: BoxDecoration(
-                              color: Colors.purple,
+                              color: Color(0xFFEE9B00),
                               borderRadius: BorderRadius.circular(13),
                               // shape: BoxShape.circle,
                             ),

@@ -193,7 +193,8 @@ class BlocoExercisesSessions extends StatelessWidget {
       onTap: press,
       child: Container(
         alignment: Alignment.center,
-        height: size.height * .12,
+        // height: size.height * .12,
+        padding: const EdgeInsets.symmetric(vertical: 23),
         width: size.width * .44,
         decoration: BoxDecoration(
           color: bSecondaryColor,

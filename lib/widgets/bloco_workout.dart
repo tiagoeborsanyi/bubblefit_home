@@ -79,8 +79,8 @@ class BlocoWorkout extends StatelessWidget {
                       'Deltoide',
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
                             fontWeight: FontWeight.w400,
-                            color: Colors.white,
-                            fontSize: 20,
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                     ),
                   ),
@@ -97,8 +97,8 @@ class BlocoWorkout extends StatelessWidget {
                       'Posterior de coxa',
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
                             fontWeight: FontWeight.w400,
-                            color: Colors.white,
-                            fontSize: 20,
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                     ),
                   ),
@@ -112,11 +112,11 @@ class BlocoWorkout extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
-                      'Posterior de coxa',
+                      'Costa supra',
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
                             fontWeight: FontWeight.w400,
-                            color: Colors.white,
-                            fontSize: 20,
+                            color: Colors.black,
+                            fontSize: 16,
                           ),
                     ),
                   ),
@@ -124,7 +124,10 @@ class BlocoWorkout extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            ElevatedButton(onPressed: () {}, child: Text('Iniciar treino'))
+            ElevatedButton(
+                onPressed: () {},
+                child: Text('Iniciar treino'),
+                style: ElevatedButton.styleFrom(primary: Color(0xFFEE9B00))),
           ],
         ),
       ),

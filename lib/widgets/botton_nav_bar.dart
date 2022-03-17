@@ -8,7 +8,7 @@ class BottonNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-      height: 70,
+      height: 50,
       color: bSecondaryColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,15 +51,15 @@ class BottonNavItem extends StatelessWidget {
           Icon(
             icon,
             color: !isActive ? Colors.grey.shade400 : Colors.white,
-            size: 20,
+            size: 25,
           ),
-          Text(
-            title,
-            style: TextStyle(
-              color: !isActive ? Colors.grey.shade400 : Colors.white,
-              fontSize: 13,
-            ),
-          )
+          // Text(
+          //   title,
+          //   style: TextStyle(
+          //     color: !isActive ? Colors.grey.shade400 : Colors.white,
+          //     fontSize: 13,
+          //   ),
+          // )
         ],
       ),
     );
