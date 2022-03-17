@@ -25,11 +25,14 @@ class CardExercise extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(
-                    "https://firebasestorage.googleapis.com/v0/b/bubblefit-c1d94.appspot.com/o/image0012bc1b-b28d-4f5d-8d48-0fc03b18a6c8.jpg?alt=media",
-                    height: 80,
-                    width: 80,
-                    fit: BoxFit.cover,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8),
+                    child: Image.network(
+                      "https://firebasestorage.googleapis.com/v0/b/bubblefit-c1d94.appspot.com/o/image0012bc1b-b28d-4f5d-8d48-0fc03b18a6c8.jpg?alt=media",
+                      height: 80,
+                      width: 80,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   const SizedBox(width: 15),
                   Column(
@@ -40,7 +43,7 @@ class CardExercise extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .bodyText1
-                            ?.copyWith(color: Colors.white, fontSize: 16),
+                            ?.copyWith(color: bTextColor, fontSize: 16),
                       ),
                       const SizedBox(height: 5),
                       Row(
@@ -52,22 +55,25 @@ class CardExercise extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: bTertiaryColor,
                                 borderRadius: BorderRadius.circular(25),
-                                border: Border.all(color: Colors.black)),
+                                border:
+                                    Border.all(color: bTextColor, width: .7)),
                             child: const Text(
                               'COSTA',
                               style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 11,
+                                color: bTextColor,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
                               ),
                             ),
                           ),
                           const SizedBox(width: 15),
                           Container(
-                            height: 45,
+                            // height: 45,
                             width: 100,
+                            padding: const EdgeInsets.symmetric(vertical: 5),
                             decoration: BoxDecoration(
-                              color: Color(0xFFEE9B00),
-                              borderRadius: BorderRadius.circular(13),
+                              color: bBtnColor,
+                              borderRadius: BorderRadius.circular(6),
                               // shape: BoxShape.circle,
                             ),
                             child: Row(

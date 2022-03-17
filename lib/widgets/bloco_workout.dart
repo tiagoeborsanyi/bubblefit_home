@@ -39,7 +39,7 @@ class BlocoWorkout extends StatelessWidget {
               style: Theme.of(context).textTheme.subtitle1?.copyWith(
                     fontWeight: FontWeight.w400,
                     color: Colors.white,
-                    fontSize: 19,
+                    fontSize: 18,
                   ),
             ),
             const SizedBox(height: 3),
@@ -78,8 +78,8 @@ class BlocoWorkout extends StatelessWidget {
                     child: Text(
                       'Deltoide',
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            fontWeight: FontWeight.w300,
+                            color: bTextColor,
                             fontSize: 16,
                           ),
                     ),
@@ -96,8 +96,8 @@ class BlocoWorkout extends StatelessWidget {
                     child: Text(
                       'Posterior de coxa',
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black,
+                            fontWeight: FontWeight.w300,
+                            color: bTextColor,
                             fontSize: 16,
                           ),
                     ),
@@ -114,9 +114,9 @@ class BlocoWorkout extends StatelessWidget {
                     child: Text(
                       'Costa supra',
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                            fontWeight: FontWeight.w400,
-                            color: Colors.black,
-                            fontSize: 16,
+                            fontWeight: FontWeight.w300,
+                            color: bTextColor,
+                            fontSize: 15,
                           ),
                     ),
                   ),
@@ -127,7 +127,7 @@ class BlocoWorkout extends StatelessWidget {
             ElevatedButton(
                 onPressed: () {},
                 child: Text('Iniciar treino'),
-                style: ElevatedButton.styleFrom(primary: Color(0xFFEE9B00))),
+                style: ElevatedButton.styleFrom(primary: bBtnColor)),
           ],
         ),
       ),
