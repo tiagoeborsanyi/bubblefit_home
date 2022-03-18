@@ -53,13 +53,6 @@ class BottonNavItem extends StatelessWidget {
             color: !isActive ? Colors.grey.shade400 : Colors.white,
             size: 25,
           ),
-          // Text(
-          //   title,
-          //   style: TextStyle(
-          //     color: !isActive ? Colors.grey.shade400 : Colors.white,
-          //     fontSize: 13,
-          //   ),
-          // )
         ],
       ),
     );

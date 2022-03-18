@@ -17,7 +17,7 @@ class BlocoWorkout extends StatelessWidget {
       // height: size.height * .3,
       padding: const EdgeInsets.only(top: 10, bottom: 4),
       decoration: BoxDecoration(
-        color: bSecondaryColor,
+        color: Theme.of(context).colorScheme.secondary,
         borderRadius: BorderRadius.circular(6),
       ),
       child: Padding(
@@ -27,38 +27,22 @@ class BlocoWorkout extends StatelessWidget {
           children: [
             Text(
               'Último workout realizado',
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                    fontWeight: FontWeight.w500,
-                    color: Colors.white,
-                    fontSize: 20,
-                  ),
+              style: Theme.of(context).textTheme.headline4,
             ),
             const SizedBox(height: 10),
             Text(
               'Treino para Deltoide',
-              style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
+              style: Theme.of(context).textTheme.subtitle2,
             ),
             const SizedBox(height: 3),
             Text(
               'Última sessão realizada: 15/03/22 - Posterior de coxa',
-              style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                    fontWeight: FontWeight.w300,
-                    color: Colors.white,
-                    fontSize: 14,
-                  ),
+              style: Theme.of(context).textTheme.bodyText2,
             ),
             const SizedBox(height: 3),
             Text(
               'Ciclo 2 de 4 - 50% realizado',
-              style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                    fontWeight: FontWeight.w300,
-                    color: Colors.white,
-                    fontSize: 12,
-                  ),
+              style: Theme.of(context).textTheme.bodyText1,
             ),
             const SizedBox(height: 13),
             SingleChildScrollView(
@@ -72,16 +56,12 @@ class BlocoWorkout extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                         vertical: 15, horizontal: 12),
                     decoration: BoxDecoration(
-                      color: bTertiaryColor,
+                      color: Theme.of(context).colorScheme.secondaryVariant,
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
                       'Deltoide',
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                            fontWeight: FontWeight.w300,
-                            color: bTextColor,
-                            fontSize: 16,
-                          ),
+                      style: Theme.of(context).textTheme.subtitle1,
                     ),
                   ),
                   const SizedBox(width: 13),
@@ -90,16 +70,12 @@ class BlocoWorkout extends StatelessWidget {
                     width: size.width * .40,
                     padding: const EdgeInsets.symmetric(vertical: 15),
                     decoration: BoxDecoration(
-                      color: bTertiaryColor,
+                      color: Theme.of(context).colorScheme.secondaryVariant,
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
                       'Posterior de coxa',
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                            fontWeight: FontWeight.w300,
-                            color: bTextColor,
-                            fontSize: 16,
-                          ),
+                      style: Theme.of(context).textTheme.subtitle1,
                     ),
                   ),
                   const SizedBox(width: 13),
@@ -108,26 +84,21 @@ class BlocoWorkout extends StatelessWidget {
                     width: size.width * .40,
                     padding: const EdgeInsets.symmetric(vertical: 15),
                     decoration: BoxDecoration(
-                      color: bTertiaryColor,
+                      color: Theme.of(context).colorScheme.secondaryVariant,
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    child: Text(
-                      'Costa supra',
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                            fontWeight: FontWeight.w300,
-                            color: bTextColor,
-                            fontSize: 15,
-                          ),
-                    ),
+                    child: Text('Costa supra',
+                        style: Theme.of(context).textTheme.subtitle1),
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
-                onPressed: () {},
-                child: const Text('Iniciar treino'),
-                style: ElevatedButton.styleFrom(primary: bBtnColor)),
+              onPressed: () {},
+              child: const Text('Iniciar treino'),
+              // style: ElevatedButton.styleFrom(primary: bBtnColor),
+            ),
           ],
         ),
       ),

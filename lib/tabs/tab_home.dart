@@ -3,8 +3,6 @@ import 'package:bubblefit_home/widgets/bloco_workout.dart';
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 
-import '../constants.dart';
-
 class TabHome extends StatelessWidget {
   const TabHome({
     Key? key,
@@ -58,27 +56,18 @@ class TabHome extends StatelessWidget {
           const SizedBox(height: 20),
           Text(
             'Acompanhe seu desempenho',
-            style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                  fontWeight: FontWeight.w400,
-                  color: Colors.white,
-                  fontSize: 22,
-                ),
+            style: Theme.of(context).textTheme.headline3,
           ),
           const SizedBox(height: 5),
           Row(
             children: [
               const Icon(
                 Icons.graphic_eq,
-                color: Colors.white,
               ),
               const SizedBox(width: 9),
               Text(
                 'Média de peso levantado nos ultimos 7 dias',
-                style: Theme.of(context).textTheme.subtitle2?.copyWith(
-                      fontWeight: FontWeight.w300,
-                      color: Colors.white,
-                      fontSize: 14,
-                    ),
+                style: Theme.of(context).textTheme.bodyText2,
               ),
             ],
           ),
@@ -118,7 +107,12 @@ class VerticalBarLabelChart extends StatelessWidget {
       //          insideLabelStyleSpec: new charts.TextStyleSpec(...),
       //          outsideLabelStyleSpec: new charts.TextStyleSpec(...)),
       barRendererDecorator: charts.BarLabelDecorator<String>(),
-      domainAxis: const charts.OrdinalAxisSpec(),
+      domainAxis: const charts.OrdinalAxisSpec(
+        showAxisLine: false,
+        renderSpec: charts.NoneRenderSpec(),
+      ),
+      defaultRenderer: charts.BarLaneRendererConfig(
+          cornerStrategy: const charts.ConstCornerStrategy(30)),
     );
   }
 
@@ -136,6 +130,8 @@ class VerticalBarLabelChart extends StatelessWidget {
           id: 'Sales',
           domainFn: (OrdinalSales sales, _) => sales.year,
           measureFn: (OrdinalSales sales, _) => sales.sales,
+          colorFn: (_, __) => charts.MaterialPalette.teal.shadeDefault,
+          // radiusPxFn: ,
           data: data,
           // Set a label accessor to control the text of the bar label.
           labelAccessorFn: (OrdinalSales sales, _) =>
@@ -172,16 +168,12 @@ class BlocoExercisesSessions extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 23),
         width: size.width * .44,
         decoration: BoxDecoration(
-          color: bSecondaryColor,
+          color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(6),
         ),
         child: Text(
           title,
-          style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                fontWeight: FontWeight.w400,
-                color: Colors.white,
-                fontSize: 20,
-              ),
+          style: Theme.of(context).textTheme.headline4,
         ),
       ),
     );

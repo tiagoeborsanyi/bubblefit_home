@@ -72,7 +72,7 @@ class CardExercise extends StatelessWidget {
                             width: 100,
                             padding: const EdgeInsets.symmetric(vertical: 5),
                             decoration: BoxDecoration(
-                              color: bBtnColor,
+                              color: Colors.teal,
                               borderRadius: BorderRadius.circular(6),
                               // shape: BoxShape.circle,
                             ),

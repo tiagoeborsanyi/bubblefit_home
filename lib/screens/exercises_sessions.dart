@@ -1,8 +1,6 @@
 import 'package:bubblefit_home/widgets/card_exercise.dart';
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-
 class ExercisesSessions extends StatelessWidget {
   const ExercisesSessions({
     Key? key,
@@ -14,9 +12,11 @@ class ExercisesSessions extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: bPrimaryColor,
-          bottom: const TabBar(
-            tabs: [
+          backgroundColor: Theme.of(context).primaryColor,
+          bottom: TabBar(
+            labelColor: Theme.of(context).colorScheme.primaryVariant,
+            // labelColor: Colors.red,
+            tabs: const [
               Tab(
                 text: 'Exercicios',
               ),

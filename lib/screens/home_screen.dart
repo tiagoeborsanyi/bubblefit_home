@@ -53,18 +53,16 @@ class _HomeScreenState extends State<HomeScreen> {
             onPressed: () {
               Provider.of<ThemeModel>(context, listen: false).toogleTheme();
             },
-            icon: const Icon(Icons.toggle_on),
+            icon: Icon(
+              Icons.toggle_on,
+              color: Theme.of(context).iconTheme.color,
+            ),
           ),
         ],
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Theme.of(context).primaryColor,
-          // textTheme: Theme.of(context).textTheme.copyWith(
-          //       caption: const TextStyle(
-          //         color: Colors.black,
-          //       ),
-          //     ),
         ),
         child: BottomNavigationBar(
           currentIndex: _page,
@@ -76,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
           selectedItemColor: Theme.of(context).textTheme.bodyText1!.color,
-          unselectedItemColor: Colors.white54,
+          unselectedItemColor: Colors.red,
           items: [
             BottomNavigationBarItem(
                 icon: Icon(
