@@ -12,7 +12,7 @@ class ExercisesSessions extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).primaryColor,
+          backgroundColor: Theme.of(context).colorScheme.onPrimary,
           bottom: TabBar(
             labelColor: Theme.of(context).colorScheme.primaryVariant,
             // labelColor: Colors.red,

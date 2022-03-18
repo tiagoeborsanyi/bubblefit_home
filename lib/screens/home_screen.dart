@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Theme.of(context).colorScheme.onPrimary,
         leading: Padding(
           padding: const EdgeInsets.only(left: 15, top: 8, bottom: 8),
           child: CircleAvatar(
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
-          canvasColor: Theme.of(context).primaryColor,
+          canvasColor: Theme.of(context).colorScheme.onPrimary,
         ),
         child: BottomNavigationBar(
           currentIndex: _page,

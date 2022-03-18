@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 
 ThemeData darkTheme = ThemeData.dark().copyWith(
     brightness: Brightness.dark,
-    primaryColor: const Color(0xFF121212),
+    // primaryColor: const Color(0xFF121212),
     scaffoldBackgroundColor: const Color(0xFF121212),
     unselectedWidgetColor: Colors.white54,
 
     // accentColor: Color(0xFF2B2B2B),
     colorScheme: ColorScheme.fromSwatch().copyWith(
-      secondary: const Color(0xFF2B2B2B),
-      secondaryVariant: const Color(0xFF606060),
       primary: Colors.teal,
       primaryVariant: Colors.white,
+      onPrimary: const Color(0xFF121212),
+      secondary: const Color(0xFF2B2B2B),
+      secondaryVariant: const Color(0xFF606060),
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,
     textTheme: const TextTheme(
@@ -54,7 +55,7 @@ ThemeData darkTheme = ThemeData.dark().copyWith(
 
 ThemeData lightTheme = ThemeData.light().copyWith(
   brightness: Brightness.light,
-  primaryColor: Colors.white,
+  // primaryColor: Colors.white,
   scaffoldBackgroundColor: Colors.white,
   visualDensity: VisualDensity.adaptivePlatformDensity,
   // accentColor: const Color(0xFF2B2B2B),
@@ -63,6 +64,7 @@ ThemeData lightTheme = ThemeData.light().copyWith(
     secondaryVariant: Colors.grey.shade200,
     primary: Colors.teal,
     primaryVariant: Colors.black,
+    onPrimary: Colors.white,
   ),
   textTheme: const TextTheme(
     bodyText1: TextStyle(
