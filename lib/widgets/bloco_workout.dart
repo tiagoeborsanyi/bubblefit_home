@@ -25,9 +25,15 @@ class BlocoWorkout extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Último workout realizado',
-              style: Theme.of(context).textTheme.headline4,
+            Row(
+              children: [
+                const Icon(Icons.fitness_center),
+                const SizedBox(width: 10),
+                Text(
+                  'Último workout realizado',
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+              ],
             ),
             const SizedBox(height: 10),
             Text(
@@ -96,7 +102,14 @@ class BlocoWorkout extends StatelessWidget {
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {},
-              child: const Text('Iniciar treino'),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon(Icons.play_circle),
+                  SizedBox(width: 5),
+                  Text('Iniciar treino'),
+                ],
+              ),
               // style: ElevatedButton.styleFrom(primary: bBtnColor),
             ),
           ],
